@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- 시계 -->
+  <div class="clock">
+    <div class="date">
+        <div class="year">0000</div>
+        <div class="divider">-</div>
+        <div class="month">00</div>
+        <div class="divider">-</div>
+        <div class="day">00</div>
+    </div>
+
+    <div class="time">
+        <div class="hour">00</div>
+        <div class="divider">:</div>
+        <div class="min">00</div>
+        <div class="divider">:</div>
+        <div class="sec">00</div>
+    </div>
+  </div>    
+  <button type="button" id="toggleFormat">12H / 24H 전환</button>
+  
+  <!-- 배터리 -->
+  <div class="battery">배터리: 100%</div>
+
+  <!-- 알람 UI -->
+  <div class="alarm-box">
+    <div class="row">
+      <!-- 시 -->
+      <div class="time-select">
+        <button type="button" id="btnHour">시</button>
+        <span id="selHour">00</span>
+        <ul class="time-options" id="listHour"></ul>
+      </div>
+      <!-- 분 -->
+      <div class="time-select">
+        <button type="button" id="btnMin">분</button>
+        <span id="selMin">00</span>
+        <ul class="time-options" id="listMin"></ul>
+      </div>
+      <!-- 초 -->
+      <div class="time-select">
+        <button type="button" id="btnSec">초</button>
+        <span id="selSec">00</span>
+        <ul class="time-options" id="listSec"></ul>
+      </div>
+
+      <button type="button" id="btnAddAlarm">알람 추가</button>
+    </div>
+
+    <!-- 알람 목록 -->
+    <div class="alarm-title">알람 (최대 3개)</div>
+    <ul class="alarm-list" id="alarmList"></ul>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
